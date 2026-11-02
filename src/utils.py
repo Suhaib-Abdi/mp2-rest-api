@@ -12,10 +12,3 @@ def setup_logging(verbose=False):
     )
 
 
-def validate_input(filepath):
-    """Check whether the input path exists and is a file."""
-    if Path(filepath).is_file():
-        logger.info(f"Input file validated: {filepath}")
-        return True
-    logger.error(f"Input file not found: {filepath}")
-    return False
